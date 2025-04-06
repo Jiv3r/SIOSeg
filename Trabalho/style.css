@@ -11,6 +11,7 @@ body {
     line-height: 1.6;
     color: #333;
     padding-top: 70px; /* Evita sobreposição do header fixo */
+    background-color: #fff;
 }
 
 /* Estilização do cabeçalho fixo */
@@ -40,9 +41,15 @@ nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-/* Configuração do banner principal */
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #ffcc00;
+}
+
+/* Banner principal */
 .banner {
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
@@ -66,17 +73,24 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-/* Efeito hover para o botão de destaque */
 .botao-destaque:hover {
     background-color: #e6b800;
 }
 
+/* Estilo base para seções */
+section {
+    margin-bottom: 60px;
+}
+
 /* Seção de serviços */
 .servicos {
-    padding: 50px;
+    padding: 50px 20px;
     text-align: center;
+    max-width: 1200px;
+    margin: 0 auto 60px;
 }
 
 /* Grid responsivo para exibir os serviços */
@@ -93,4 +107,9 @@ nav ul li a {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.servico-card:hover {
+    transform: translateY(-5px);
 }
