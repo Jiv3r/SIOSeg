@@ -113,3 +113,39 @@ section {
 .servico-card:hover {
     transform: translateY(-5px);
 }
+/* Card com fundo para Instalação de Câmeras */
+.bg-instalacao {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('https://recontech.com.br/wp-content/uploads/2021/10/projeto-para-instalacao-de-cameras-2.jpg') center/cover no-repeat;
+    color: white;
+}
+
+/* Card com fundo para Manutenção de Câmeras */
+.bg-manutencao {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('https://www.jcseg.com.br/wp-content/uploads/2022/10/manutencao-de-cameras-sorocaba-768x402.jpg') center/cover no-repeat;
+    color: white;
+}
+
+/* Card com fundo para Orçamento */
+.bg-orcamento {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('https://th.bing.com/th/id/OIP.6tub9Odg4da9FSs2M1UC1gHaEK?rs=1&pid=ImgDetMain') center/cover no-repeat;
+    color: white;
+}
+
+/* Aplica consistência visual aos cards com imagem */
+.bg-instalacao,
+.bg-manutencao,
+.bg-orcamento {
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.bg-instalacao:hover,
+.bg-manutencao:hover,
+.bg-orcamento:hover {
+    transform: translateY(-5px);
+}
