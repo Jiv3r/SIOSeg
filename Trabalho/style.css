@@ -134,10 +134,16 @@ section {
     color: white;
 }
 
+.bg-sobre-nos { 
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('https://th.bing.com/th/id/OIP.6tub9Odg4da9FSs2M1UC1gHaEK?rs=1&pid=ImgDetMain') center/cover no-repeat;
+    color: white;
+}
 /* Aplica consistência visual aos cards com imagem */
 .bg-instalacao,
 .bg-manutencao,
-.bg-orcamento {
+.bg-orcamento,
+.bg-sobre-nos {
     padding: 2rem;
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
@@ -146,6 +152,7 @@ section {
 
 .bg-instalacao:hover,
 .bg-manutencao:hover,
-.bg-orcamento:hover {
+.bg-orcamento:hover,
+.bg-sobre-nos {
     transform: translateY(-5px);
 }
