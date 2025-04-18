@@ -113,6 +113,34 @@ section {
 .servico-card:hover {
     transform: translateY(-5px);
 }
+
+.produtos{ padding: 40px 20px;
+    text-align: center;
+    max-width: 280px;
+    margin: 0 auto 60px;
+}
+
+.produtos-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+.produtos-card{
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; 
+}
+
+/* Card para fundo produtos cameras*/
+.bg-Comaera{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+           url(https://nextin.com.br/br/wp-content/uploads/2016/05/legislacao-sobre-cameras-de-seguranca-em-condominio.jpg) center/cover no-repeat;
+           color:white;
+}
+
 /* Card com fundo para Instalação de Câmeras */
 .bg-instalacao {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
