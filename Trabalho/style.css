@@ -138,11 +138,6 @@ section {
 }
 
 /* Imagens de fundo de Serviços */
-.bg-Comaera {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-           url(https://nextin.com.br/br/wp-content/uploads/2016/05/legislacao-sobre-cameras-de-seguranca-em-condominio.jpg) center/cover no-repeat;
-    color: white;
-}
 
 .bg-instalacao {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -258,7 +253,27 @@ section {
     transition: transform 0.3s ease;
 }
 
+.produtos-card h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgb(0, 0, 0); /* Garantir legibilidade no fundo */
+}
+
+.produtos-card p {
+    font-size: 1rem;
+    color: rgb(0, 0, 0); /* Garantir legibilidade no fundo */
+    margin-bottom: 20px;
+}
+
 /* Imagens de fundo de Produtos */
+
+.bg-Comaera {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+           url(https://nextin.com.br/br/wp-content/uploads/2016/05/legislacao-sobre-cameras-de-seguranca-em-condominio.jpg) center/cover no-repeat;
+    color: white;
+}
+
 .bg-sobre-nos { 
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url('https://th.bing.com/th/id/OIP.6tub9Odg4da9FSs2M1UC1gHaEK?rs=1&pid=ImgDetMain') center/cover no-repeat;
