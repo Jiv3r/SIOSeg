@@ -237,12 +237,13 @@ section {
     max-width: 280px;
 }
 .produtos-card {
-    background: #f4f4f4;
-    padding: 20px;
+    background-color: #0000006b;
+    padding: 10px 20px;
     border-radius: 5px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     list-style: none;
+    margin-right: 15px;
 }
 
 .produtos-card h3 {
@@ -267,6 +268,12 @@ section {
 
 .itens{
     display:inline-flex;
+}
+
+.carrinho{
+    color: white;
+    margin-right: 50px;
+    
 }
 /* =====================
    PÁGINA DE CONTATO
