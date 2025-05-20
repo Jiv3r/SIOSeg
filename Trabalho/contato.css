@@ -99,8 +99,18 @@ header {
 }
 
 .inputText{
-    border-radius: 15px;
+    border-radius: 10px;
     height: 20px;
+}
+
+.inputText::placeholder{
+    color: #999; 
+    font-style: italic; 
+}
+
+.inputText:focus{
+    border-color: #007bff; /* Mudar cor da borda */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.4); /* Adicionar sombra */
 }
 
 .btn{
