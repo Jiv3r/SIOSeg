@@ -1,1 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* Configurações gerais do corpo da página */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #000000;
+    padding-top: 70px; /* Evita sobreposição do header fixo */
+    background-color: #fff;
+}
+
+/* Estilização do cabeçalho fixo */
+header {
+    background-color: #21387c;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilização da navegação no cabeçalho */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #ffcc00;
+}
+
+.produtos {
+    padding: 40px 20px;
+    text-align: center;
+    max-width: 280px;
+}
+.produtos-card {
+    background-color: #0000006b;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    list-style: none;
+    margin-right: 15px;
+    display:flex;
+}
+
+.produtos-card h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgb(0, 0, 0); /* Garantir legibilidade no fundo */
+}
+
+.produtos-card p {
+    font-size: 1rem;
+    color: rgb(0, 0, 0); /* Garantir legibilidade no fundo */
+    margin-bottom: 20px;
+    
+}
+
+.bg-sobre-nos { 
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('https://th.bing.com/th/id/OIP.6tub9Odg4da9FSs2M1UC1gHaEK?rs=1&pid=ImgDetMain') center/cover no-repeat;
+    color: white;
+}
+
+.itens{
+    display:inline-flex;
+}
+
+.carrinho{
+    color: white;
+    margin-right: 50px;
+    
+}
