@@ -47,49 +47,84 @@ nav ul li a:hover {
     text-decoration: underline;
     color: #ffcc00;
 }
-
+/* Produtos */
 .produtos {
     padding: 40px 20px;
     text-align: center;
-    max-width: 280px;
 }
-.produtos-card {
-    background-color: #0000006b;
+.produtos ul{
     padding: 10px 20px;
     border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: transform 0.3s ease;
     list-style: none;
-    margin-right: 15px;
-    display:flex;
+    display:flex;  
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
 }
 
-.produtos-card h3 {
-    font-size: 1.6rem;
+.produtos ul h3 {
+    font-size: 1.4rem; /* Tamanho da fonte menor para o h3 do item */
     font-weight: bold;
+    color: #21387c; /* Cor mais escura para o título */
     margin-bottom: 10px;
-    color: rgb(0, 0, 0); /* Garantir legibilidade no fundo */
 }
 
-.produtos-card p {
-    font-size: 1rem;
-    color: rgb(0, 0, 0); /* Garantir legibilidade no fundo */
+.produtos ul p {
+    font-size: 0.95rem;
+    color: #555;
     margin-bottom: 20px;
     
 }
 
-.bg-sobre-nos { 
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('https://th.bing.com/th/id/OIP.6tub9Odg4da9FSs2M1UC1gHaEK?rs=1&pid=ImgDetMain') center/cover no-repeat;
-    color: white;
+.produtos ul li{
+    background-color: #f0f0f0; /* Fundo mais claro para o item individual */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 280px; /* Largura fixa para cada item */
+    display: flex; /* Para organizar conteúdo dentro do item */
+    flex-direction: column; /* Conteúdo em coluna */
+    align-items: center; /* Centraliza itens */
+    text-align: center;
 }
 
-.itens{
-    display:inline-flex;
+.produtos ul li:hover{
+    transform: translateY(-5px); /* Move o item levemente para cima */
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px; /* Sombra mais intensa */
+}
+
+.produtos ul li img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
 }
 
 .carrinho{
     color: white;
-    margin-right: 50px;
-    
+    margin-right: 50px;  
+}
+
+.carrinho a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+h2{
+    margin-top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color:#0000006b;
+    margin-left: 500px;
+    margin-right: 500px;
+    border-radius: 15px;
+    text-align: center;
+    color: #fff;
+    padding: 10px 0;
 }
