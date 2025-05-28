@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Compras - Power Security</title>
+    <link rel="stylesheet" href="produto.css"> <link rel="stylesheet" href="compras.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Power Security</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>   
+            <a href="compras.html" class="cart-icon-link">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+        </nav>
+    </header>
+
+    <main class="minhas-compras">
+        <h2>Minhas Compras</h2>
+        <div class="carrinho-vazio" style="display: none;">
+            <p>Seu carrinho de compras está vazio. <a href="produtos.html">Voltar para a loja</a>.</p>
+        </div>
+        <div class="itens-carrinho">
+            <div class="item-compra">
+                <img src="imagens/legislacao-sobre-cameras-de-seguranca-em-condominio.jpg" alt="Câmera de Segurança">
+                <div class="detalhes-item">
+                    <h3>Câmera de Alta Definição</h3>
+                    <p>Preço: R$ 350,00</p>
+                    <p>Quantidade: 1</p>
+                    <button class="remover-item">Remover</button>
+                </div>
+            </div>
+            <div class="item-compra">
+                <img src="imagens/shutterstock_625953083-1024x683.jpg" alt="Alarme Residencial">
+                <div class="detalhes-item">
+                    <h3>Alarme com Baixo Custo</h3>
+                    <p>Preço: R$ 200,00</p>
+                    <p>Quantidade: 2</p>
+                    <button class="remover-item">Remover</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="resumo-compra">
+            <h3>Resumo do Pedido</h3>
+            <p>Subtotal: R$ 750,00</p>
+            <p>Frete: R$ 0,00</p>
+            <p class="total-pedido">Total: R$ 750,00</p>
+            <button class="finalizar-compra">Finalizar Compra</button>
+        </div>
+    </main>
+
+</body>
+</html>
