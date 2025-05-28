@@ -1,3 +1,6 @@
+@import url(./header.css);
+@import url(./footer.css);
+
 * {
     margin: 0;
     padding: 0;
@@ -34,7 +37,7 @@ nav ul li a:hover {
 }
 
 header {
-    background-color: #21387c;
+    background-color: var(--cor-header);
     padding: 1rem;
     position: fixed;
     width: 100%;
