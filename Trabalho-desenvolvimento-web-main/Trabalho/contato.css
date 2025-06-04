@@ -1,0 +1,175 @@
+@import url(./header.css);
+@import url(./footer.css);
+
+:root {
+    --primary-blue: #21387c;
+    --light-gray: #f9f9f9;
+    --medium-gray: #ddd;
+    --dark-text: #333;
+    --light-text: #666;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-text);
+    padding-top: 70px;
+    background-color: var(--light-gray);
+}
+
+
+.cart-icon-link {
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.cart-icon-link i {
+    pointer-events: none;
+}
+
+.cart-icon-link:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+
+
+.contato {
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 900px; 
+    margin: 80px auto 60px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+}
+
+.titulo2_cont {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.titulo2_cont::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-blue);
+    border-radius: 2px;
+}
+
+
+.contato-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px; 
+    margin-top: 20px;
+}
+
+.contato-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contato-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.estamos_ajudar {
+    background-color: #e6f0ff;
+    border: 1px solid var(--primary-blue);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    color: var(--dark-text);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.inform {
+    background-color: #f0f8ff;
+    border: 1px solid var(--medium-gray);
+    border-radius: 12px;
+    padding: 25px;
+    margin: 30px auto;
+    color: var(--dark-text);
+    text-align: center;
+    line-height: 2;
+    font-size: 1.1rem;
+}
+
+.inform i {
+    color: var(--primary-blue);
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+
+.inform p {
+    margin-top: 10px;
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+.contato-card > p {
+    font-size: 1rem;
+    color: var(--light-text);
+    margin-bottom: 20px;
+}
+.contato-card > p:last-of-type {
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-weight: bold;
+    color: var(--primary-blue);
+}
+
+.inputText {
+    width: calc(100% - 40px);
+    padding: 15px 20px;
+    margin-bottom: 18px;
+    border: 1px solid var(--medium-gray);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--dark-text);
+    background-color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+.inputText:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(33, 56, 124, 0.2);
+}
+
+.inputText::placeholder {
+    color: #999;
+}
+
+.nome:invalid {
+    animation: shake 0.25s;
+    border-color: #dc3545;
+}
+
+@keyframes shake {

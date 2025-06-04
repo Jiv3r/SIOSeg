@@ -1,0 +1,63 @@
+/* =====================
+   RESET E CONFIGURAÇÕES GERAIS
+====================== */
+@import url(./header.css);
+@import url(./footer.css);
+/* Reset básico para remover margens e preenchimentos padrão dos navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configurações gerais do corpo da página */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #000000;
+    padding-top: 70px; /* Evita sobreposição do header fixo */
+    background-color: #fff;
+}
+
+/* Estilização do cabeçalho fixo */
+
+
+/* =====================
+   BANNER (PÁGINA INICIAL)
+====================== */
+
+.banner {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url(https://cdn2.picryl.com/photo/2019/05/06/cameras-de-surveillance-a-lyon-pres-des-halles-paul-bocuse-mai-2019-74f8ff-1024.jpg) center / cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+}
+
+/* Botão de destaque no banner */
+.botao-destaque {
+    display: inline-block;
+    background-color: #ffcc00;
+    color: black;
+    padding: 10px 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.botao-destaque:hover {
+    background-color: #e6b800;
+}
+
+/* =====================
+   SEÇÕES E SERVIÇOS
+====================== */
+
+
