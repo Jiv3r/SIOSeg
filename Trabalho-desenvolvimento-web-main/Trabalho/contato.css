@@ -172,4 +172,6 @@ body {
     border-color: #dc3545;
 }
 
-@keyframes shake {
+.rosto{
+    margin-top: 10px;
+}
