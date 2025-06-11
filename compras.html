@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrinho de Compras - Power Security</title>
+
+<!-- IMPORTAÇÃO DO CSS/ESTILO -->
+  <link rel="stylesheet" href="compras.css">
+
+  <!-- Ícones Font Awesome para o ícone do carrinho -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+  <!-- ===================== -->
+  <!-- Cabeçalho do site     -->
+  <!-- ===================== -->
+  <header>
+    <nav>
+      <h1>Power Security</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+
+      <!-- Ícone do carrinho com contador -->
+      <a href="compras.html" class="cart-icon-link">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="cart-count">0</span>
+      </a>
+    </nav>
+  </header>
+
+  <!-- ===================== -->
+  <!-- Conteúdo principal    -->
+  <!-- ===================== -->
+  <main class="minhas-compras">
+    <h2>Meu Carrinho</h2>
+
+    <!-- Lista dinâmica de itens adicionados -->
+    <div id="lista-carrinho" class="itens-carrinho"></div>
+
+    <!-- Total da compra -->
+    <h3 id="total-geral">Total: R$ 0,00</h3>
+    
+    <!-- Botões de ação -->
+    <div class="botoes-carrinho">
+      <button id="limpar-carrinho">Limpar Carrinho</button>
+      <button id="finalizar-compra">Finalizar Compra</button>
+    </div>
+  </main>
+
+  <!-- ===================== -->
+  <!-- Scripts JavaScript    -->
+  <!-- ===================== -->
+  <script src="carrinho.js"></script>         <!-- Lida com ações como adicionar ao carrinho -->
+  <script src="exibir-carrinho.js"></script>  <!-- Mostra os itens e valores na página -->
+</body>
+</html>

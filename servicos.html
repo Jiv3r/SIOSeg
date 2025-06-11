@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- =======================================
+         METADADOS BÁSICOS
+    ======================================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços - Power Security</title>
+
+    <!-- =======================================
+         ESTILOS E ÍCONES
+    ======================================== -->
+    <link rel="stylesheet" href="servicos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- =======================================
+         CABEÇALHO / NAVEGAÇÃO
+    ======================================== -->
+    <header>
+        <nav>
+            <h1>Power Security</h1>
+
+            <!-- Menu de navegação principal -->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+
+            <!-- Ícone do carrinho de compras -->
+            <a href="compras.html" class="cart-icon-link">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </a>
+        </nav>
+    </header>
+
+    <!-- =======================================
+         CONTEÚDO PRINCIPAL: SERVIÇOS
+    ======================================== -->
+    <main class="servicos">
+        <h2>Serviços Oferecidos</h2>
+
+        <div class="servico-grid">
+
+            <!-- =============================
+                 Card: Instalação de Câmeras
+            ============================== -->
+            <div class="servico-card bg-instalacao">
+                <h3>Instalação de Câmeras</h3>
+                <p>Realizamos a instalação de sistemas de câmeras de segurança com tecnologia moderna e excelente cobertura.</p>
+            </div>
+
+            <!-- =============================
+                 Card: Manutenção de Câmeras
+            ============================== -->
+            <div class="servico-card bg-manutencao">
+                <h3>Manutenção de Câmeras</h3>
+                <p>Oferecemos manutenção preventiva e corretiva para garantir o funcionamento contínuo dos seus equipamentos.</p>
+            </div>
+
+            <!-- =============================
+                 Card: Orçamento Personalizado
+            ============================== -->
+            <div class="servico-card bg-orcamento">
+                <h3>Orçamento Personalizado</h3>
+                <p>Solicite um orçamento sem compromisso, com soluções adaptadas às suas necessidades de segurança.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- =======================================
+         SCRIPTS
+    ======================================== -->
+    <script src="carrinho.js"></script> <!-- Script do carrinho de compras -->
+
+</body>
+</html>
