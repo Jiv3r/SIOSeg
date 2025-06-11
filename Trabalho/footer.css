@@ -1,0 +1,77 @@
+/* ===============================
+   Variáveis globais
+================================= */
+:root {
+    --cor-header: #21387c; /* Cor padrão usada no cabeçalho e rodapé */
+}
+
+/* ===============================
+   Estilo do rodapé (footer)
+================================= */
+footer {
+    background-color: var(--cor-header); /* Fundo do rodapé */
+    padding: 1rem;                        /* Espaçamento interno */
+    position: fixed;                     /* Fixa no fundo da tela */
+    width: 100%;                         /* Ocupa toda a largura */
+    display: flex;                       /* Layout flexível */
+    justify-content: space-between;     /* Espaço entre elementos internos */
+    align-items: center;                /* Alinha verticalmente */
+    color: #fff;                         /* Cor do texto */
+}
+
+/* ===============================
+   Navegação dentro do rodapé
+================================= */
+footer nav {
+    display: flex;                       /* Layout flexível */
+    justify-content: space-between;     /* Itens distribuídos */
+    align-items: center;                /* Centralização vertical */
+    width: 100%;                         /* Ocupa toda a largura do rodapé */
+}
+
+/* ===============================
+   Ícone do carrinho no rodapé
+================================= */
+.cart-icon-link {
+    color: white;                        /* Cor padrão */
+    font-size: 1.5rem;                   /* Tamanho do ícone */
+    margin-left: 20px;                   /* Espaçamento lateral */
+    text-decoration: none;              /* Remove sublinhado */
+    display: flex;                       /* Permite alinhar ícone e texto (se houver) */
+    align-items: center;                /* Alinha verticalmente */
+}
+
+.cart-icon-link i {
+    pointer-events: none;               /* Ícone não interfere com cliques */
+}
+
+/* Hover no ícone do carrinho */
+.cart-icon-link:hover {
+    color: #ffcc00;                      /* Cor ao passar o mouse */
+    transform: scale(1.1);               /* Aumenta levemente o ícone */
+    transition: color 0.3s ease, transform 0.2s ease; /* Animações suaves */
+}
+
+/* ===============================
+   Menu de navegação no rodapé
+================================= */
+nav ul {
+    list-style: none;                   /* Remove marcadores da lista */
+    display: flex;                      /* Layout em linha */
+}
+
+nav ul li {
+    margin-left: 20px;                 /* Espaçamento entre os links */
+}
+
+nav ul li a {
+    text-decoration: none;             /* Remove sublinhado */
+    color: white;                      /* Cor dos links */
+    font-weight: bold;                /* Negrito */
+    transition: color 0.3s ease;      /* Transição suave de cor */
+}
+
+nav ul li a:hover {
+    text-decoration: underline;        /* Sublinhado no hover */
+    color: #ffcc00;                    /* Cor no hover */
+}
