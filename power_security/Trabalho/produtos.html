@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Configurações básicas -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Power Security</title>
+
+    <!-- IMPORTAÇÃO DO CSS/ESTILO -->
+    <link rel="stylesheet" href="produto.css">
+
+    <!-- Ícones Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+          crossorigin="anonymous" 
+          referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header>
+        <nav>
+            <h1>Power Security</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+
+            <!-- Ícone do carrinho com contador -->
+            <a href="compras.html" class="cart-icon-link">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </a>
+        </nav>
+    </header>
+
+    <!-- ==================== TÍTULO DA SEÇÃO ==================== -->
+    <h2>Nossos Produtos</h2>
+
+    <!-- ==================== LISTAGEM DE PRODUTOS ==================== -->
+    <main class="produtos">
+        <ul>
+            <!-- Produto 1 -->
+            <li class="produto" data-id="1" data-nome="Câmera de Alta Definição" data-preco="350">
+                <h3>Câmera de Alta Definição</h3>
+                <img src="imagens/legislacao-sobre-cameras-de-seguranca-em-condominio.jpg" 
+                     alt="Câmera de Segurança" width="250">
+                <p>Vendemos câmeras de alta definição com os menores preços do mercado.</p>
+                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+            </li>
+
+            <!-- Produto 2 -->
+            <li class="produto" data-id="2" data-nome="Alarme com Baixo Custo" data-preco="200">
+                <h3>Alarme com Baixo Custo</h3>
+                <img src="imagens/shutterstock_625953083-1024x683.jpg" 
+                     alt="Alarme Residencial" width="250">
+                <p>Alarmes com os mais baixos custos, sem custo de instalação e manutenção.</p>
+                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+            </li>
+
+            <!-- Produto 3 -->
+            <li class="produto" data-id="3" data-nome="Cerca Elétrica Industrial" data-preco="400">
+                <h3>Cerca Elétrica Industrial</h3>
+                <img src="imagens/kit_cerca_eletrica_intelbras_100_metros_big_haste_industrial_aco_inox_86150_1_efba23985fa5dcf9a3fdfde77e1ac37f_20241009124756.jpg" 
+                     alt="Cerca Elétrica" width="230">
+                <p>Cercas elétricas sem taxa de instalação com interface intuitiva para acionamento.</p>
+                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+            </li>
+
+            <!-- Produto 4 -->
+            <li class="produto" data-id="4" data-nome="Fechadura Elétrica C90 Pro" data-preco="250">
+                <h3>Fechadura Elétrica C90 Pro</h3>
+                <img src="imagens/fechadura-c90-pro-ad-cinza-ayvu3e8syu.jpg" 
+                     alt="Fechadura C90" width="250">
+                <p>Fechaduras com acionamento remoto e excelente custo-benefício.</p>
+                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+            </li>
+        </ul>
+    </main>
+
+    <!-- ==================== SCRIPT DO CARRINHO ==================== -->
+    <script src="carrinho.js"></script>
+
+</body>
+</html>
