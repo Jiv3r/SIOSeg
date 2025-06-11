@@ -190,6 +190,31 @@
     animation: shake 0.25s;
     border-color: #dc3545;
 }
+/*botão enviar */
+.meu-btn {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: 0.375rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+                border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; 
+  color: #21387c;
+  border-color: #21387c;
+}
+
+
+.meu-btn-outline-primary:hover {
+  color: #fff;
+  background-color: #21387c;
+}
 
 @keyframes shake {
     0% { transform: translateX(0); }
