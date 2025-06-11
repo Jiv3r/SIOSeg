@@ -142,7 +142,7 @@
 /* ============================
    Responsividade para telas pequenas
 ============================= */
-@media (max-width: 600px) {
+@media (max-width: 1080px) {
     .item-carrinho {
         flex-direction: column;
         align-items: flex-start;
