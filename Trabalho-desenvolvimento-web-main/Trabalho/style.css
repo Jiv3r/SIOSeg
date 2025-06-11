@@ -1,23 +1,10 @@
 /* =====================
    RESET E CONFIGURAÇÕES GERAIS
 ====================== */
-@import url(./header.css);
+@import url(./header.css); /* Reset básico para remover margens e preenchimentos padrão dos navegadores */
 @import url(./footer.css);
-/* Reset básico para remover margens e preenchimentos padrão dos navegadores */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-/* Configurações gerais do corpo da página */
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    color: #000000;
-    padding-top: 70px; /* Evita sobreposição do header fixo */
-    background-color: #fff;
-}
+
 
 /* Estilização do cabeçalho fixo */
 
@@ -56,8 +43,13 @@ body {
     background-color: #e6b800;
 }
 
-/* =====================
-   SEÇÕES E SERVIÇOS
-====================== */
-
-
+/* ============================
+   Responsividade para telas pequenas
+============================= */
+@media (max-width: 600px) {
+    .item-carrinho {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}

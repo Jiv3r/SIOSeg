@@ -1,6 +1,9 @@
 @import url(./header.css);
 @import url(./footer.css);
 
+/* ===================== */
+/* VARIÁVEIS DE COR       */
+/* ===================== */
 :root {
     --primary-blue: #21387c;
     --light-gray: #f9f9f9;
@@ -9,29 +12,18 @@
     --light-text: #666;
 }
 
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    color: var(--dark-text);
-    padding-top: 70px;
-    background-color: var(--light-gray);
-}
-
-
+/* ===================== */
+/* ÍCONE DO CARRINHO      */
+/* ===================== */
 .cart-icon-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
     color: white;
     font-size: 1.5rem;
     margin-left: 20px;
     text-decoration: none;
-    display: flex;
-    align-items: center;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .cart-icon-link i {
@@ -41,11 +33,23 @@ body {
 .cart-icon-link:hover {
     color: #ffcc00;
     transform: scale(1.1);
-    transition: color 0.3s ease, transform 0.2s ease;
 }
 
+#cart-count {
+    position: absolute;
+    top: -8px;
+    right: -12px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 50%;
+    font-weight: bold;
+}
 
-
+/* ===================== */
+/* SEÇÃO DE CONTATO       */
+/* ===================== */
 .contato {
     padding: 50px 20px;
     text-align: center;
@@ -56,6 +60,7 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
 }
 
+/* Título principal da seção */
 .titulo2_cont {
     margin-bottom: 40px;
     font-size: 2.5rem;
@@ -76,7 +81,7 @@ body {
     border-radius: 2px;
 }
 
-
+/* Grid para cartões de contato */
 .contato-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -84,6 +89,7 @@ body {
     margin-top: 20px;
 }
 
+/* Cartões com info de contato */
 .contato-card {
     background: #ffffff;
     padding: 40px;
@@ -97,18 +103,33 @@ body {
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
+/* Parágrafos internos dos cartões */
+.contato-card > p {
+    font-size: 1rem;
+    color: var(--light-text);
+    margin-bottom: 20px;
+}
+
+.contato-card > p:last-of-type {
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-weight: bold;
+    color: var(--primary-blue);
+}
+
+/* Aviso amigável */
 .estamos_ajudar {
     background-color: #e6f0ff;
     border: 1px solid var(--primary-blue);
     border-radius: 12px;
     padding: 25px;
-    margin-bottom: 30px;
-    margin-top: 20px;
+    margin: 20px 0 30px;
     color: var(--dark-text);
     font-size: 1.1rem;
     line-height: 1.8;
 }
 
+/* Informações adicionais */
 .inform {
     background-color: #f0f8ff;
     border: 1px solid var(--medium-gray);
@@ -133,18 +154,9 @@ body {
     color: var(--primary-blue);
 }
 
-.contato-card > p {
-    font-size: 1rem;
-    color: var(--light-text);
-    margin-bottom: 20px;
-}
-.contato-card > p:last-of-type {
-    margin-top: 30px;
-    margin-bottom: 0;
-    font-weight: bold;
-    color: var(--primary-blue);
-}
-
+/* ===================== */
+/* FORMULÁRIOS E INPUTS   */
+/* ===================== */
 .inputText {
     width: calc(100% - 40px);
     padding: 15px 20px;
@@ -167,11 +179,27 @@ body {
     color: #999;
 }
 
+/* Animação de erro simples */
 .nome:invalid {
     animation: shake 0.25s;
     border-color: #dc3545;
 }
 
-.rosto{
-    margin-top: 10px;
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+/* ============================
+   Responsividade para telas pequenas
+============================= */
+@media (max-width: 600px) {
+    .item-carrinho {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
 }

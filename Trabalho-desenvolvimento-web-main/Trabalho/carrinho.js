@@ -1,49 +1,55 @@
-// Função para carregar carrinho do localStorage ou criar vazio
-function carregarCarrinho() {
-  const carrinho = localStorage.getItem('carrinho');
-  return carrinho ? JSON.parse(carrinho) : [];
+// ===============================
+// Recupera carrinho do localStorage ou inicia vazio
+// ===============================
+let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+// ===============================
+// Atualiza o número no ícone do carrinho no cabeçalho
+// ===============================
+function atualizarContadorCarrinho() {
+    const contador = document.getElementById("cart-count");
+    const totalItens = carrinho.reduce((total, item) => total + item.quantidade, 0);
+    contador.textContent = totalItens;
 }
 
-// Salvar carrinho no localStorage
-function salvarCarrinho(carrinho) {
-  localStorage.setItem('carrinho', JSON.stringify(carrinho));
-}
-
-// Atualizar contador no botão
-function atualizarContador() {
-  const carrinho = carregarCarrinho();
-  const totalItens = carrinho.reduce((acc, item) => acc + item.quantidade, 0);
-  document.getElementById('contador-carrinho').textContent = totalItens;
-}
-
-// Adicionar produto no carrinho
+// ===============================
+// Adiciona um produto ao carrinho
+// ===============================
 function adicionarAoCarrinho(produto) {
-  const carrinho = carregarCarrinho();
-  const index = carrinho.findIndex(item => item.id === produto.id);
+    const existente = carrinho.find(item => item.id === produto.id);
 
-  if(index > -1) {
-    carrinho[index].quantidade++;
-  } else {
-    carrinho.push({...produto, quantidade: 1});
-  }
+    if (existente) {
+        existente.quantidade += 1; // Já existe? Aumenta a quantidade
+    } else {
+        carrinho.push({ ...produto, quantidade: 1 }); // Se não, adiciona novo produto
+    }
 
-  salvarCarrinho(carrinho);
-  atualizarContador();
-  alert(`${produto.nome} adicionado ao carrinho!`);
+    // Salva o carrinho atualizado no localStorage
+    localStorage.setItem("carrinho", JSON.stringify(carrinho));
+
+    // Atualiza o contador no ícone do carrinho
+    atualizarContadorCarrinho();
 }
 
-// Evento dos botões "Adicionar"
-document.querySelectorAll('.adicionar-carrinho').forEach(botao => {
-  botao.addEventListener('click', () => {
-    const produtoEl = botao.closest('.produto');
-    const produto = {
-      id: produtoEl.getAttribute('data-id'),
-      nome: produtoEl.getAttribute('data-nome'),
-      preco: parseFloat(produtoEl.getAttribute('data-preco'))
-    };
-    adicionarAoCarrinho(produto);
-  });
+// ===============================
+// "Escuta" cliques nos botões "Adicionar ao Carrinho"
+// ===============================
+document.querySelectorAll(".adicionar-carrinho").forEach(botao => {
+    botao.addEventListener("click", () => {
+        const li = botao.closest(".produto"); // Encontra o container do produto
+
+        // Cria o objeto produto com base nos atributos de data do HTML
+        const produto = {
+            id: li.dataset.id,
+            nome: li.dataset.nome,
+            preco: parseFloat(li.dataset.preco),
+        };
+
+        adicionarAoCarrinho(produto);
+    });
 });
 
-// Inicializa contador ao carregar a página
-atualizarContador();
+// ===============================
+// Inicializa o contador do carrinho ao carregar a página
+// ===============================
+atualizarContadorCarrinho();
