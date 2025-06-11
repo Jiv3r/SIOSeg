@@ -75,3 +75,14 @@ nav ul li a:hover {
     text-decoration: underline;        /* Sublinhado no hover */
     color: #ffcc00;                    /* Cor no hover */
 }
+
+/* ============================
+   Responsividade para telas pequenas
+============================= */
+@media (max-width: 600px) {
+    .item-carrinho {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
