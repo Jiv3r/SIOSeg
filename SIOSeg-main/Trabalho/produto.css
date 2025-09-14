@@ -1,0 +1,139 @@
+/* ================================
+   IMPORTAÇÕES
+================================= */
+@import url(./header.css);  /* Estilo do cabeçalho */
+@import url(./footer.css);  /* Estilo do rodapé */
+
+/* ================================
+   SEÇÃO: PRODUTOS
+================================= */
+.produtos {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Layout da lista de produtos */
+.produtos ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+/* Cada card de produto */
+.produtos ul li {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+/* Efeito ao passar o mouse no card */
+.produtos ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+}
+
+/* Imagem do produto */
+.produtos ul li img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Título do produto */
+.produtos ul h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--cor-header);
+    margin-bottom: 10px;
+}
+
+/* Descrição do produto */
+.produtos ul li p {
+    flex-grow: 1;
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* ================================
+   BOTÕES: Adicionar ao carrinho e similares
+================================= */
+.adicionar-carrinho,
+.lermais {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: auto;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover dos botões */
+.adicionar-carrinho:hover,
+.lermais:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* ================================
+   TÍTULOS H2
+================================= */
+h2 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    background-color: #0000006b;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 15px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* ================================
+   ÍCONE DO CARRINHO E CONTADOR
+================================= */
+.cart-icon-link {
+    position: relative;
+    display: inline-block;
+}
+
+#cart-count {
+    position: absolute;
+    top: -8px;
+    right: -12px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+/* ============================
+   Responsividade para telas pequenas
+============================= */
+@media (max-width: 1080px) {
+    .item-carrinho {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
