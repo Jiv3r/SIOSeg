@@ -2,80 +2,87 @@
    Variáveis globais
 ================================= */
 :root {
-    --cor-header: #21387c;
+    --cor-header: #21387c; /* Cor padrão usada no cabeçalho e rodapé */
 }
 
 /* ===============================
    Estilo do rodapé (footer)
 ================================= */
 footer {
-    background-color: var(--cor-header); 
-    padding: 1rem;                                   
-    width: 100%;                        
-    display: flex;                   
-    justify-content: space-between; 
-    align-items: center;            
-    color: #fff;
-    margin-top: auto; 
+    background-color: var(--cor-header); /* Fundo do rodapé */
+    padding: 1rem;                        /* Espaçamento interno */
+    position: fixed;                     /* Fixa no fundo da tela */
+    width: 100%;                         /* Ocupa toda a largura */
+    display: flex;                       /* Layout flexível */
+    justify-content: space-between;     /* Espaço entre elementos internos */
+    align-items: center;                /* Alinha verticalmente */
+    color: #fff;                         /* Cor do texto */
 }
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+
 /* ===============================
    Navegação dentro do rodapé
 ================================= */
 footer nav {
-    display: flex;                     
-    justify-content: space-between;    
-    align-items: center;            
-    width: 100%;                       
+    display: flex;                       /* Layout flexível */
+    justify-content: space-between;     /* Itens distribuídos */
+    align-items: center;                /* Centralização vertical */
+    width: 100%;                         /* Ocupa toda a largura do rodapé */
 }
 
 /* ===============================
    Ícone do carrinho no rodapé
 ================================= */
 .cart-icon-link {
-    color: white;               
-    font-size: 1.5rem;               
-    margin-left: 20px;                
-    text-decoration: none;           
-    display: flex;           
-    align-items: center; 
+    color: white;                        /* Cor padrão */
+    font-size: 1.5rem;                   /* Tamanho do ícone */
+    margin-left: 20px;                   /* Espaçamento lateral */
+    text-decoration: none;              /* Remove sublinhado */
+    display: flex;                       /* Permite alinhar ícone e texto (se houver) */
+    align-items: center;                /* Alinha verticalmente */
 }
 
 .cart-icon-link i {
-    pointer-events: none;     
+    pointer-events: none;               /* Ícone não interfere com cliques */
 }
 
 /* Hover no ícone do carrinho */
 .cart-icon-link:hover {
-    color: #ffcc00;                      
-    transform: scale(1.1);              
-    transition: color 0.3s ease, transform 0.2s ease;
+    color: #ffcc00;                      /* Cor ao passar o mouse */
+    transform: scale(1.1);               /* Aumenta levemente o ícone */
+    transition: color 0.3s ease, transform 0.2s ease; /* Animações suaves */
 }
 
 /* ===============================
    Menu de navegação no rodapé
 ================================= */
 nav ul {
-    list-style: none;
-    display: flex;
+    list-style: none;                   /* Remove marcadores da lista */
+    display: flex;                      /* Layout em linha */
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin-left: 20px;                 /* Espaçamento entre os links */
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    text-decoration: none;             /* Remove sublinhado */
+    color: white;                      /* Cor dos links */
+    font-weight: bold;                /* Negrito */
+    transition: color 0.3s ease;      /* Transição suave de cor */
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
-    color: #ffcc00;
+    text-decoration: underline;        /* Sublinhado no hover */
+    color: #ffcc00;                    /* Cor no hover */
+}
+
+/* ============================
+   Responsividade para telas pequenas
+============================= */
+@media (max-width: 1080px) {
+    .item-carrinho {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
 }

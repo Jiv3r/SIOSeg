@@ -1,0 +1,236 @@
+@import url(./header.css);
+@import url(./footer.css);
+
+/* ===================== */
+/* VARIÁVEIS DE COR       */
+/* ===================== */
+:root {
+    --primary-blue: #21387c;
+    --light-gray: #f9f9f9;
+    --medium-gray: #ddd;
+    --dark-text: #333;
+    --light-text: #666;
+}
+
+/* ===================== */
+/* ÍCONE DO CARRINHO      */
+/* ===================== */
+.cart-icon-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.cart-icon-link i {
+    pointer-events: none;
+}
+
+.cart-icon-link:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+#cart-count {
+    position: absolute;
+    top: -8px;
+    right: -12px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+/* ===================== */
+/* SEÇÃO DE CONTATO       */
+/* ===================== */
+.contato {
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 900px; 
+    margin: 80px auto 60px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+}
+
+/* Título principal da seção */
+.titulo2_cont {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.titulo2_cont::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-blue);
+    border-radius: 2px;
+}
+
+/* Imagem */
+
+.img{
+    margin-top: 10px;
+}
+
+/* Grid para cartões de contato */
+.contato-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px; 
+    margin-top: 20px;
+}
+
+/* Cartões com info de contato */
+.contato-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contato-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Parágrafos internos dos cartões */
+.contato-card > p {
+    font-size: 1rem;
+    color: var(--light-text);
+    margin-bottom: 20px;
+}
+
+.contato-card > p:last-of-type {
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-weight: bold;
+    color: var(--primary-blue);
+}
+
+/* Aviso amigável */
+.estamos_ajudar {
+    background-color: #e6f0ff;
+    border: 1px solid var(--primary-blue);
+    border-radius: 12px;
+    padding: 25px;
+    margin: 20px 0 30px;
+    color: var(--dark-text);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Informações adicionais */
+.inform {
+    background-color: #f0f8ff;
+    border: 1px solid var(--medium-gray);
+    border-radius: 12px;
+    padding: 25px;
+    margin: 30px auto;
+    color: var(--dark-text);
+    text-align: center;
+    line-height: 2;
+    font-size: 1.1rem;
+}
+
+.inform i {
+    color: var(--primary-blue);
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+
+.inform p {
+    margin-top: 10px;
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+/* ===================== */
+/* FORMULÁRIOS E INPUTS   */
+/* ===================== */
+.inputText {
+    width: calc(100% - 40px);
+    padding: 15px 20px;
+    margin-bottom: 18px;
+    border: 1px solid var(--medium-gray);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--dark-text);
+    background-color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+.inputText:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(33, 56, 124, 0.2);
+}
+
+.inputText::placeholder {
+    color: #999;
+}
+
+/* Animação de erro simples */
+.nome:invalid {
+    animation: shake 0.25s;
+    border-color: #dc3545;
+}
+/*botão enviar */
+.meu-btn {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: 0.375rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+                border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; 
+  color: #21387c;
+  border-color: #21387c;
+}
+
+
+.meu-btn-outline-primary:hover {
+  color: #fff;
+  background-color: #21387c;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+/* ============================
+   Responsividade para telas pequenas
+============================= */
+@media (max-width: 1080px) {
+    .item-carrinho {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}

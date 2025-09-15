@@ -13,6 +13,12 @@
    BANNER (PÁGINA INICIAL)
 ====================== */
 
+.login{
+    margin-top: 8%;
+    margin-left: 50%;
+
+}
+
 .banner {
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
@@ -28,6 +34,8 @@
 
 /* Botão de destaque no banner */
 .botao-destaque {
+    margin-bottom: 15px;
+    margin-left: 50%;
     display: inline-block;
     background-color: #ffcc00;
     color: black;
@@ -52,4 +60,33 @@
         align-items: flex-start;
         gap: 8px;
     }
+}
+.inputText {
+    margin-left: 37%;
+    width: 30%;
+    padding: 15px 20px;
+    margin-bottom: 18px;
+    border: 1px solid var(--medium-gray);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--dark-text);
+    background-color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+.inputText:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(33, 56, 124, 0.2);
+}
+
+.inputText::placeholder {
+    color: #999;
+}
+.container {
+    margin-top: 3%;
+}
+.menu{
+    margin: 70px 350px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Power Security</title>
+    <title>SIOSeg</title>
 
     <!-- IMPORTAÇÃO DO CSS/ESTILO -->
     <link rel="stylesheet" href="style.css" />
@@ -14,47 +14,48 @@
           crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-
     <!-- ===============================
          HEADER + MENU DE NAVEGAÇÃO
     ================================ -->
     <header>
         <nav>
-            <h1>Power Security</h1>
+            <h1>SIOSeg</h1>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="servicos.html">Serviços</a></li>
                 <li><a href="produtos.html">Produtos</a></li>
                 <li><a href="contato.html">Contato</a></li>
             </ul>
-            <!-- Ícone do carrinho com contador dinâmico -->
-            <a href="compras.html" class="cart-icon-link">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span id="cart-count">0</span>
-            </a>
         </nav>
     </header>
 
     <!-- ===============================
          SEÇÃO BANNER PRINCIPAL
     ================================ -->
-    <section class="banner">
-        <h2>Há 20 anos cuidando do seu patrimônio</h2>
-        <p>Os melhores serviços para a sua segurança</p>
-        <a href="contato.html" class="botao-destaque">Entre em contato</a>
-    </section>
+    <div class="menu">
+        <h1 class="login">Login</h1>
+        <div class="container">
+        <form id="form-contato">
+            <!-- CAMPO NOME -->
+            <label>
+                <input type="email" name="email" placeholder="Email*" class="inputText" required>
+            </label><br>
 
+            <!-- CAMPO EMAIL -->
+            <label>
+                <input type="password" name="senha" placeholder="Senha*" class="inputText" required>
+            </label><br>
+        </div>
+        <section>
+            <a href="#" class="botao-destaque">Entrar</a>
+        </section>
+    </div>
     <!-- ===============================
          RODAPÉ COM INFORMAÇÕES E REDES SOCIAIS
     ================================ -->
     <footer>
         <nav>
-            <h1>Power Security</h1>
-            <p>
-                Somos um grupo de estudantes dedicados à criação deste site com propósitos puramente acadêmicos. 
-                Nosso objetivo é aplicar e aprimorar nossos conhecimentos em desenvolvimento web, explorando diversas 
-                tecnologias e conceitos, enquanto construímos uma plataforma que serve como um projeto prático para nossas disciplinas.
-            </p>
+            <h1>SIOSeg </h1>
             <ul>
                 <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
                 <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
