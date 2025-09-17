@@ -1,0 +1,113 @@
+@import url(./header.css);
+@import url(./footer.css);
+
+/* =====================
+   CONFIGURAÇÕES GERAIS
+====================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #1A2949; /* Cor de fundo principal */
+}
+
+/* =====================
+   LAYOUT DA PÁPINA
+====================== */
+
+.page-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* =====================
+   CARD DE LOGIN
+====================== */
+
+.login-card {
+    background-color: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    z-index: 1;
+}
+
+.logo-container {
+    margin-bottom: 2rem;
+}
+
+.inputText {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+    outline: none;
+}
+    .botao-login {
+        
+        width: 100%;
+        padding: 12px 20px;
+        margin-top: 0.5rem;
+        background-color: #ffcc00; /* Cor amarela original */
+        color: black; /* Cor do texto original */
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .register-link {
+        margin-top: 1.5rem;
+        font-size: 0.9rem;
+        color: #666;
+    }
+    
+    .register-link a {
+        color: #1A2949;
+        font-weight: bold;
+        text-decoration: none;
+        transition: text-decoration 0.3s;
+    }
+    
+    .register-link a:hover {
+        text-decoration: underline;
+    }
+
+    .user-icon {
+        background-color: #f9f9f9;
+        color: black;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+    
+    .user-icon:hover {
+        background-color: #e6b800;
+        transform: scale(1.1);
+    }
