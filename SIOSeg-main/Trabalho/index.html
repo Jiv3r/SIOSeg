@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIOSeg</title>
+
+    <!-- IMPORTAÇÃO DO CSS/ESTILO -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- FontAwesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- ===============================
+         HEADER + MENU DE NAVEGAÇÃO
+    ================================ -->
+    <header>
+        <nav>
+            <h1>SIOSeg</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===============================
+         SEÇÃO BANNER PRINCIPAL
+    ================================ -->
+    <div class="menu">
+        <h1 class="login">Login</h1>
+        <div class="container">
+        <form id="form-contato">
+            <!-- CAMPO NOME -->
+            <label>
+                <input type="email" name="email" placeholder="Email*" class="inputText" required>
+            </label><br>
+
+            <!-- CAMPO EMAIL -->
+            <label>
+                <input type="password" name="senha" placeholder="Senha*" class="inputText" required>
+            </label><br>
+        </div>
+        <section>
+            <a href="#" class="botao-destaque">Entrar</a>
+        </section>
+    </div>
+    <!-- ===============================
+         RODAPÉ COM INFORMAÇÕES E REDES SOCIAIS
+    ================================ -->
+    <footer>
+        <nav>
+            <h1>SIOSeg </h1>
+            <ul>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <!-- Script do carrinho -->
+    <script src="carrinho.js"></script>
+
+</body>
+</html>

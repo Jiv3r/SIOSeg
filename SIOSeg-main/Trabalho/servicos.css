@@ -1,0 +1,174 @@
+/* ================================
+   IMPORTAÇÕES DE ESTILO
+================================= */
+@import url(./header.css);
+@import url(./footer.css);
+
+/* ================================
+   ESTILOS GERAIS DE SEÇÃO
+================================= */
+section {
+    margin-bottom: 60px;
+}
+
+/* ================================
+   SEÇÃO: SERVIÇOS
+================================= */
+.servicos {
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto 60px;
+}
+
+.servicos h2 {
+    font-size: 2rem;
+    margin: 0 0 40px 150px; /* Alinhamento com os cards */
+    background-color: #00000080;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    text-align: left;
+    max-width: 1000px;
+}
+
+/* ================================
+   GRID DE CARDS DE SERVIÇOS
+================================= */
+.servico-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 20px 0 0 150px;
+    max-width: 1000px;
+}
+
+/* ================================
+   CARD DE SERVIÇO - Estilo Base
+================================= */
+.servico-card {
+    background: #023fba;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px #0c003ff4;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servico-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.servico-card h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgb(0, 0, 0);
+    transition: color 0.3s ease;
+}
+
+.servico-card p {
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+/* ================================
+   CARDS COM IMAGEM DE FUNDO
+   (Estilo para instalação, manutenção e orçamento)
+================================= */
+.bg-instalacao {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('https://th.bing.com/th/id/R.cc44857f675da107a92b41f476402576?rik=5ImLCnOBvDuJ4A&pid=ImgRaw&r=0') center/cover no-repeat;
+    color: white;
+}
+
+.bg-manutencao {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('https://www.jcseg.com.br/wp-content/uploads/2022/10/manutencao-de-cameras-sorocaba-768x402.jpg') center/cover no-repeat;
+    color: white;
+}
+
+.bg-orcamento {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('https://th.bing.com/th/id/OIP.6tub9Odg4da9FSs2M1UC1gHaEK?rs=1&pid=ImgDetMain') center/cover no-repeat;
+    color: white;
+}
+
+/* Cores do conteúdo dentro dos cards com imagem */
+.bg-instalacao h3,
+.bg-manutencao h3,
+.bg-orcamento h3 {
+    color: #fff;
+}
+
+.bg-instalacao p,
+.bg-manutencao p,
+.bg-orcamento p {
+    color: #fff;
+}
+
+/* Estilo extra para destaque visual */
+.bg-instalacao,
+.bg-manutencao,
+.bg-orcamento {
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.bg-instalacao:hover,
+.bg-manutencao:hover,
+.bg-orcamento:hover {
+    transform: translateY(-8px);
+}
+
+/* ================================
+   RESPONSIVIDADE - GRID DE SERVIÇOS
+================================= */
+@media (max-width: 768px) {
+    .servico-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .servico-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ================================
+   ÍCONE DO CARRINHO (HEADER)
+================================= */
+.cart-icon-link {
+    position: relative;
+    display: inline-block;
+}
+
+#cart-count {
+    position: absolute;
+    top: -8px;
+    right: -12px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+/* ============================
+   Responsividade para telas pequenas
+============================= */
+@media (max-width: 1080px) {
+    .item-carrinho {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
