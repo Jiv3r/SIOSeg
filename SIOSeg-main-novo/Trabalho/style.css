@@ -1,0 +1,178 @@
+/* Importações de estilos globais */
+@import url(./header.css);
+@import url(./footer.css);
+
+/* ============================
+   SEÇÃO HERO (BANNER)
+============================= */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    height: 60vh; /* Altura ajustada */
+    position: relative;
+    background-image: url('https://i.imgur.com/eCqE5sD.jpeg'); /* Imagem de fundo genérica */
+    background-size: cover;
+    background-position: center;
+    padding: 0 20px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 56, 124, 0.7); /* Cor primária com mais opacidade */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero h2 {
+    font-size: 3.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    background-color: transparent;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: 2px solid white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: white;
+    color: var(--cor-header);
+}
+
+/* ============================
+   ESTRUTURA DAS SEÇÕES
+============================= */
+.section-container {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    color: var(--cor-header);
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--cor-header);
+}
+
+.section-intro {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* ============================
+   SEÇÃO DE FUNCIONALIDADES (DIFERENCIAIS)
+============================= */
+.diferenciais {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.diferencial-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.diferencial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.diferencial-card i {
+    font-size: 3rem;
+    color: var(--cor-header);
+    margin-bottom: 20px;
+}
+
+.diferencial-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.diferencial-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ============================
+   SEÇÃO DA EQUIPE
+============================= */
+#equipe {
+    background-color: #fff;
+}
+
+.equipe-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.membro-card {
+    background-color: #f9f9f9;
+    padding: 20px 40px;
+    border-radius: 8px;
+    border-left: 5px solid var(--cor-header);
+}
+
+.membro-card h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin: 0;
+}

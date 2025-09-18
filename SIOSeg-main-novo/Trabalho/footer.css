@@ -1,0 +1,101 @@
+/* ===============================
+   Estilo do rodapé (footer)
+================================= */
+footer {
+    background-color: #1c2b5c; /* Tom um pouco mais escuro que o header */
+    color: #a7a7a7;
+    padding: 40px 20px 0;
+    width: 100%;
+    margin-top: auto; /* Garante que o footer fique no final */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+    min-width: 250px; /* Largura mínima para cada seção */
+}
+
+/* Seção 'Sobre' */
+.footer-section.sobre .logo-text {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.footer-section.sobre p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.footer-section.sobre .contato-footer span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-section.sobre .contato-footer i {
+    margin-right: 10px;
+    color: var(--cor-hover);
+}
+
+/* Seção de 'Links' */
+.footer-section.links h2 {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.footer-section.links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section.links ul li a {
+    display: block;
+    text-decoration: none;
+    color: #a7a7a7;
+    margin-bottom: 10px;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.footer-section.links ul li a:hover {
+    color: var(--cor-hover);
+    padding-left: 5px;
+}
+
+/* Seção de 'Redes Sociais' */
+.footer-section.social h2 {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: #a7a7a7;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--cor-hover);
+    transform: translateY(-3px);
+}
+
+/* Barra inferior do rodapé */
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #3e4e8c;
+    font-size: 0.9rem;
+}
