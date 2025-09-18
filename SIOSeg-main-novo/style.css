@@ -1,113 +1,178 @@
+/* Importações de estilos globais */
 @import url(./header.css);
 @import url(./footer.css);
 
-/* =====================
-   CONFIGURAÇÕES GERAIS
-====================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body, html {
-    height: 100%;
-    font-family: Arial, sans-serif;
-    background-color: #1A2949; /* Cor de fundo principal */
-}
-
-/* =====================
-   LAYOUT DA PÁPINA
-====================== */
-
-.page-container {
-    height: 100%;
-    width: 100%;
+/* ============================
+   SEÇÃO HERO (BANNER)
+============================= */
+.hero {
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 1rem;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    height: 60vh; /* Altura ajustada */
     position: relative;
-    overflow: hidden;
+    background-image: url('https://i.imgur.com/eCqE5sD.jpeg'); /* Imagem de fundo genérica */
+    background-size: cover;
+    background-position: center;
+    padding: 0 20px;
 }
 
-/* =====================
-   CARD DE LOGIN
-====================== */
-
-.login-card {
-    background-color: #fff;
-    padding: 2.5rem 2rem;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 380px;
-    text-align: center;
+    height: 100%;
+    background-color: rgba(33, 56, 124, 0.7); /* Cor primária com mais opacidade */
     z-index: 1;
 }
 
-.logo-container {
-    margin-bottom: 2rem;
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
 }
 
-.inputText {
-    width: 100%;
-    padding: 12px 15px;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
+.hero h2 {
+    font-size: 3.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    background-color: transparent;
+    color: white;
+    padding: 15px 30px;
     border-radius: 5px;
-    font-size: 1rem;
-    background-color: #f9f9f9;
-    transition: all 0.3s ease;
-    outline: none;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: 2px solid white;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
-    .botao-login {
-        
-        width: 100%;
-        padding: 12px 20px;
-        margin-top: 0.5rem;
-        background-color: #ffcc00; /* Cor amarela original */
-        color: black; /* Cor do texto original */
-        border: none;
-        border-radius: 5px;
-        font-size: 1rem;
-        font-weight: bold;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
 
-    .register-link {
-        margin-top: 1.5rem;
-        font-size: 0.9rem;
-        color: #666;
-    }
-    
-    .register-link a {
-        color: #1A2949;
-        font-weight: bold;
-        text-decoration: none;
-        transition: text-decoration 0.3s;
-    }
-    
-    .register-link a:hover {
-        text-decoration: underline;
-    }
+.hero-btn:hover {
+    background-color: white;
+    color: var(--cor-header);
+}
 
-    .user-icon {
-        background-color: #f9f9f9;
-        color: black;
-        height: 40px;
-        width: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        text-decoration: none;
-        font-size: 1rem;
-        transition: all 0.3s ease;
-    }
-    
-    .user-icon:hover {
-        background-color: #e6b800;
-        transform: scale(1.1);
-    }
+/* ============================
+   ESTRUTURA DAS SEÇÕES
+============================= */
+.section-container {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    color: var(--cor-header);
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--cor-header);
+}
+
+.section-intro {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* ============================
+   SEÇÃO DE FUNCIONALIDADES (DIFERENCIAIS)
+============================= */
+.diferenciais {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.diferencial-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.diferencial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.diferencial-card i {
+    font-size: 3rem;
+    color: var(--cor-header);
+    margin-bottom: 20px;
+}
+
+.diferencial-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.diferencial-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ============================
+   SEÇÃO DA EQUIPE
+============================= */
+#equipe {
+    background-color: #fff;
+}
+
+.equipe-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.membro-card {
+    background-color: #f9f9f9;
+    padding: 20px 40px;
+    border-radius: 8px;
+    border-left: 5px solid var(--cor-header);
+}
+
+.membro-card h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin: 0;
+}

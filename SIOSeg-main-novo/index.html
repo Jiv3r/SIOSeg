@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SIOSeg - Home</title>
+    <title>Projeto SIOSeG - Sistema de Gestão de Ordens de Serviço</title>
 
     <link rel="stylesheet" href="style.css" />
 
@@ -14,16 +14,94 @@
 <body>
     <header>
         <nav>
-            <h1>SIOSeg</h1>
+            <a href="index.html" class="logo"><h1>SIOSeG</h1></a>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="#sobre">O Projeto</a></li>
+                <li><a href="#funcionalidades">Funcionalidades</a></li>
+                <li><a href="#equipe">Equipe</a></li>
                 <li><a href="contato.html">Contato</a></li>
             </ul>
-            <a href="login.html" class="user-icon"><i class="fa-solid fa-user"></i></a>
+             <a href="login.html" class="login-btn">
+                <i class="fa-solid fa-user"></i>
+                <span>Acessar Sistema</span>
+            </a>
         </nav>
     </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Projeto SIOSeG</h2>
+                <p>Um sistema completo para Seguimento e Gestão de Ordens de Serviço, trazendo eficiência e transparência para empresas e clientes.</p>
+                <a href="#sobre" class="hero-btn">Saiba Mais</a>
+            </div>
+        </section>
+
+        <section id="sobre" class="section-container">
+            <h2 class="section-title">Sobre o Projeto</h2>
+            <p class="section-intro">
+                O SIOSeG foi desenvolvido para resolver falhas de organização em serviços de campo, como instalações e manutenções. A falta de controle gera atrasos e perda de credibilidade. [cite_start]Nosso sistema padroniza e acompanha cada etapa da Ordem de Serviço (OS), tornando as operações mais eficientes e a comunicação mais clara entre a empresa e o cliente. [cite: 1]
+            </p>
+        </section>
+
+        <section id="funcionalidades" class="diferenciais">
+            <h2 class="section-title">Principais Funcionalidades</h2>
+            <div class="cards-container">
+                <div class="diferencial-card">
+                    <i class="fa-solid fa-users-gear"></i>
+                    <h3>Gerenciamento de Equipe</h3>
+                    [cite_start]<p>Cadastre e gerencie técnicos, acompanhe o status das atividades e consulte o histórico detalhado de todas as Ordens de Serviço concluídas. [cite: 2]</p>
+                </div>
+                <div class="diferencial-card">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <h3>Agenda e Atendimento</h3>
+                    [cite_start]<p>Agende serviços de forma eficiente e permita que seus clientes acompanhem o status de suas solicitações em tempo real. [cite: 2]</p>
+                </div>
+                <div class="diferencial-card">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                    <h3>Controle de Estoque</h3>
+                    [cite_start]<p>Gerencie o estoque de produtos e equipamentos com registro de entradas, saídas e baixa automática de itens após cada serviço. [cite: 2]</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="equipe" class="section-container">
+            <h2 class="section-title">Equipe do Projeto</h2>
+            <div class="equipe-container">
+                <div class="membro-card">
+                    <h3>Robson Gomes</h3>
+                </div>
+                <div class="membro-card">
+                    <h3>Érika Fernandes</h3>
+                </div>
+                <div class="membro-card">
+                    <h3>Guilherme Rocha</h3>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section sobre">
+                <h2 class="logo-text">SIOSeG</h2>
+                <p>Minimizando falhas operacionais e otimizando a gestão de serviços de campo com transparência e precisão.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Navegação</h2>
+                <ul>
+                    <li><a href="#sobre">O Projeto</a></li>
+                    <li><a href="#funcionalidades">Funcionalidades</a></li>
+                    <li><a href="#equipe">Equipe</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 SIOSeG | Todos os direitos reservados.
+        </div>
+    </footer>
+
 </body>
 </html>

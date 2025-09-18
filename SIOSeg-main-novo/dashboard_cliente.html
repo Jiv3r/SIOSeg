@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Ordens de Serviço - SIOSeG</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo"><h1>SIOSeG</h1></a>
+            <ul>
+                <li><a href="dashboard_cliente.html">Minhas OS</a></li>
+                <li><a href="#">Solicitar Serviço</a></li>
+                <li><a href="contato.html">Suporte</a></li>
+            </ul>
+            <a href="index.html" class="login-btn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Sair</span>
+            </a>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+        <div class="dashboard-header">
+            <h2>Minhas Ordens de Serviço</h2>
+            <button class="btn-new-os">
+                <i class="fa-solid fa-plus"></i>
+                Solicitar Novo Serviço
+            </button>
+        </div>
+
+        <div class="os-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nº da OS</th>
+                        <th>Descrição do Serviço</th>
+                        <th>Status</th>
+                        <th>Técnico</th>
+                        <th>Data Agendada</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="os-table-body">
+                    <tr>
+                        <td colspan="6" style="text-align:center;">Carregando Ordens de Serviço...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script>
+        // Função para carregar e exibir os dados das Ordens de Serviço
+        function carregarOrdensDeServico() {
+            // SIMULAÇÃO: Em um projeto real, aqui você faria uma chamada fetch para sua API.
+            // Ex: fetch('/api/os.php?cliente_id=1').then(res => res.json()).then(data => { ... });
+            
+            // Dados de exemplo que viriam do seu backend (baseados na tabela 'os')
+            const ordensDeServico = [
+                {
+                    id_os: '00125',
+                    descricao_servico: 'Instalação de Câmera de Segurança',
+                    status: 'Em Andamento',
+                    tecnico: 'Robson Gomes',
+                    data_agendada: '2025-09-20'
+                },
+                {
+                    id_os: '00124',
+                    descricao_servico: 'Manutenção de Alarme',
+                    status: 'Concluída',
+                    tecnico: 'Érika Fernandes',
+                    data_agendada: '2025-09-15'
+                },
+                {
+                    id_os: '00123',
+                    descricao_servico: 'Verificação de Cerca Elétrica',
+                    status: 'Aberta',
+                    tecnico: 'Aguardando',
+                    data_agendada: '2025-09-25'
+                }
+            ];
+
+            const tabelaBody = document.getElementById('os-table-body');
+            tabelaBody.innerHTML = ''; // Limpa a mensagem de "Carregando..."
+
+            if (ordensDeServico.length === 0) {
+                tabelaBody.innerHTML = '<tr><td colspan="6" style="text-align:center;">Nenhuma Ordem de Serviço encontrada.</td></tr>';
+                return;
+            }
+
+            // Mapeia os status para as classes CSS
+            const statusClasses = {
+                'Em Andamento': 'em-andamento',
+                'Concluída': 'concluida',
+                'Aberta': 'aberta',
+                'Cancelada': 'cancelada'
+            };
+
+            // Preenche a tabela com os dados
+            ordensDeServico.forEach(os => {
+                const statusClassName = statusClasses[os.status] || '';
+                const dataFormatada = new Date(os.data_agendada + 'T00:00:00').toLocaleDateString('pt-BR');
+
+                const row = `
+                    <tr>
+                        <td>${os.id_os}</td>
+                        <td>${os.descricao_servico}</td>
+                        <td><span class="status ${statusClassName}">${os.status}</span></td>
+                        <td>${os.tecnico}</td>
+                        <td>${dataFormatada}</td>
+                        <td><a href="#" class="action-view">Visualizar</a></td>
+                    </tr>
+                `;
+                tabelaBody.innerHTML += row;
+            });
+        }
+
+        // Executa a função quando a página carregar
+        document.addEventListener('DOMContentLoaded', carregarOrdensDeServico);
+    </script>
+</body>
+</html>

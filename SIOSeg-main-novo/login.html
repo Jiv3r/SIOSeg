@@ -1,48 +1,68 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SIOSeg - Login</title>
-
-    <link rel="stylesheet" href="style.css" />
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
-          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SIOSeG</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
     <header>
         <nav>
-            <h1>SIOSeg</h1>
+            <a href="index.html" class="logo"><h1>SIOSeG</h1></a>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="contato.html">Contato</a></li>
+                <li><a href="index.html#sobre">O Projeto</a></li>
+                <li><a href="index.html#funcionalidades">Funcionalidades</a></li>
+                <li><a href="index.html#equipe">Equipe</a></li>
             </ul>
-            <a href="login.html" class="user-icon"><i class="fa-solid fa-user"></i></a>
+            <a href="login.html" class="login-btn">
+                <i class="fa-solid fa-user"></i>
+                <span>Acessar Sistema</span>
+            </a>
         </nav>
     </header>
-    <main class="page-container">
-        <div class="login-card">      
-            SIOSeg      
-            <form id="form-login">
-                <label>
-                    <input type="text" name="usuario" placeholder="Usuário" class="inputText" required>
-                </label>
 
-                <label>
-                    <input type="password" name="senha" placeholder="Senha" class="inputText" required>
-                </label>
-            
-                <button type="submit" class="botao-login">Acessar</button>
-            </form>
-                <div class="register-link">
-                Não possui uma conta? <a href="#">Registrar-se</a>
+    <main class="login-container">
+        <div class="login-box">
+            <h2>Acessar o Sistema</h2>
+            <p>Seja bem-vindo! Entre com suas credenciais de acesso.</p>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="email">Email ou Login</label>
+                    <input type="text" id="email" name="email" required>
                 </div>
+                <div class="input-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+                <p id="error-message" style="color: red; display: none; margin-bottom: 15px;">Usuário ou senha inválidos.</p>
+                <button type="submit" class="btn-login">Entrar</button>
+                <p style="margin-top: 15px; font-size: 0.9em;">Não tem uma conta? <a href="cadastro.html" class="forgot-password" style="display: inline;">Cadastre-se</a></p>
+            </form>
         </div>
     </main>
+    
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const errorMessage = document.getElementById('error-message');
+
+            // Simulação de uma chamada para a API de login do seu backend
+            // O backend validaria o usuário e a senha no banco de dados.
+            const email = document.getElementById('email').value;
+
+            // Para simular, vamos aceitar qualquer email e redirecionar
+            if (email) {
+                console.log('Login bem-sucedido (Simulação). Redirecionando para o dashboard...');
+                // Em um caso real, o backend retornaria um token ou criaria uma sessão
+                window.location.href = 'dashboard_cliente.html';
+            } else {
+                errorMessage.style.display = 'block';
+            }
+        });
+    </script>
 </body>
 </html>
